@@ -1,0 +1,164 @@
+/* * {
+    outline: 1px solid;
+} */
+
+body {
+    margin: 0;
+    font-family: "Josefin Sans";
+    background: white;
+}
+
+#logo {
+    position: fixed;
+    top: 4em;
+}
+
+#hero {
+    background-image: url("images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 610px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+main {
+    display: grid;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 610px;
+    height: 100vh;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+        linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+main div#content {
+    align-self: center;
+    margin: 0 25%;
+    margin-top: 5%;
+}
+
+h1 {
+    letter-spacing: 1rem;
+    font-size: 4em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h1 span:nth-child(1) {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+h1 span:nth-child(2) {
+    font-weight: 600;
+}
+
+p {
+    color: hsl(0, 36%, 70%);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin: 3em 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+input[type="email"],
+input[type="text"] {
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* grid-column: 1/11;
+    grid-row: 1/2; */
+    grid-area: 1/1/2/11;
+    border: 1px solid gray;
+    padding: 1em 0;
+    padding-left: 3rem;
+    border-radius: 3em;
+    width: 100%;
+}
+
+input[type="email"]::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-size: 1rem;
+    font-family: "Josefin Sans";
+}
+
+input[type="email"]:focus {
+    outline: none;
+}
+
+button {
+    /* grid-column: 10/11;
+    grid-row: 1/2; */
+    grid-area: 1/10/2/11;
+    border-radius: 3em;
+    background-color: hsl(0, 74%, 74%);
+    border: none;
+    width: 80px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsla(0, 74%, 74%, 0.7);
+}
+
+#noti {
+    color: hsl(0, 74%, 74%);
+    font-weight: 600;
+    grid-area: 2/1/3/11;
+    font-size: 0.9em;
+    margin: 0;
+    padding-left: 3rem;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 376px) {
+    main {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    #logo {
+        position: initial;
+    }
+    #hero {
+        position: initial;
+        background-image: url("images/hero-mobile.jpg");
+        margin: 6% 0;
+        margin-bottom: 20%;
+        height: 250px;
+        width: 375px;
+    }
+
+    main div#content {
+        grid-area: 2/1/3/1;
+        margin: 0;
+    }
+    #content2 {
+        padding: 0 10%;
+    }
+    #content2 {
+        text-align: center;
+    }
+    #noti {
+        text-align: initial;
+    }
+    #content h1 {
+        font-size: 2em;
+    }
+    #logo {
+        margin-top: 2em;
+        margin-left: 4em;
+    }
+    p {
+        margin: 1em 0;
+    }
+    br {
+        display: none;
+    }
+}
