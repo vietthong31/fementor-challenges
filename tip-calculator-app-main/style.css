@@ -1,0 +1,221 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  font-size: 16px;
+}
+
+output {
+  font-size: 3rem;
+  color: var(--strong-cyan);
+}
+
+button {
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+#tips button:hover,
+#result button:not(:disabled):hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  background-color: var(--light-grayish-cyan);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-1em);
+}
+
+label {
+  color: var(--grayish-cyan);
+}
+
+input {
+  border-radius: 0.3em;
+  padding: 0.2em;
+}
+
+input {
+  font-size: 24px;
+  background-color: var(--very-light-grayish-cyan);
+  border: 2px solid transparent;
+  text-align: right;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  font-family: inherit;
+  text-align: right;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--strong-cyan);
+}
+
+input.error {
+  border: 2px solid red;
+}
+
+main {
+  padding: 2em;
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+
+main {
+  background-color: #fff;
+  border-radius: 1em;
+}
+
+/* TIP FORM */
+#bill,
+#people {
+  background-repeat: no-repeat;
+  background-position: center left 1em;
+  grid-column: 1/-1;
+  padding: 0.2em 1em;
+}
+
+#bill {
+  background-image: url("/images/icon-dollar.svg");
+}
+
+#people {
+  background-image: url("/images/icon-person.svg");
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+#form > div:not(#tips) {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 0.5rem;
+}
+
+#form div span.error {
+  text-align: right;
+  color: red;
+}
+
+/* TIP */
+#tips {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: auto 1fr 1fr;
+  justify-content: space-between;
+  gap: 1em;
+  width: 100%;
+}
+
+#tips label {
+  grid-column: 1 / -1;
+}
+
+#tips button {
+  background-color: var(--very-dark-cyan);
+  color: #fff;
+  font-size: 24px;
+}
+
+#tips button#selected {
+  background-color: var(--strong-cyan);
+}
+
+input#customTip::placeholder {
+  text-align: center;
+}
+
+/* RESULT */
+
+#result {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-cyan);
+  padding: 2rem;
+  border-radius: 1em;
+}
+
+#result div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#result div label {
+  color: var(--grayish-cyan);
+}
+
+#result div label::first-line {
+  color: var(--very-light-grayish-cyan);
+}
+
+#result button {
+  margin-top: auto;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  font-family: inherit;
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+}
+
+#result button:disabled {
+  background-color: hsl(172, 67%, 45%, 0.3);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 426px) {
+  main {
+    grid-template-columns: 90%;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    padding: 1em;
+    margin-top: 2em;
+  }
+
+  body {
+    margin-top: 3em;
+    transform: none;
+  }
+
+  #tips {
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: auto repeat(3, 1fr);
+  }
+
+  #result {
+    padding: 1em;
+    font-size: 0.8rem;
+    row-gap: 1em;
+  }
+
+  #result output {
+    font-size: 2rem;
+  }
+}
