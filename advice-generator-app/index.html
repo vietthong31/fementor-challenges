@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: hsl(218, 23%, 16%);
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Manrope', sans-serif;
+      }
+
+      main {
+        background-color: hsl(217, 19%, 24%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+        padding: 2rem;
+        max-width: 40%;
+        font-weight: 800;
+      }
+
+      #advice {
+        font-size: 28px;
+        text-align: center;
+        width: 444px;
+        color: hsl(193, 38%, 86%);
+      }
+
+      #divider {
+        background-image: url('./images/pattern-divider-desktop.svg');
+        height: 16px;
+        width: 100%;
+      }
+
+      span:is(main > span),
+      button {
+        color: hsl(150, 100%, 66%);
+        letter-spacing: 5px;
+      }
+
+      #btnWrap {
+        display: inline-block;
+        transform: scale(2) translateY(1.38rem);
+        border-radius: 100%;
+        background-color: hsl(150, 100%, 66%);
+        position: relative;
+      }
+
+      #btnWrap:hover {
+        box-shadow: 0px 0px 10px 0px hsl(150, 100%, 66%);
+      }
+
+      button {
+        display: block;
+        cursor: pointer;
+        border-width: 0;
+        padding: 0;
+        background-color: transparent;
+        transform: scale(0.5);
+      }
+
+      button img {
+        display: block;
+      }
+
+      .screen-reader {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+
+      @media screen and (max-width: 950px) {
+        main {
+          min-width: 80%;
+        }
+        #divider {
+          background-image: url('./images/pattern-divider-mobile.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        #advice {
+          width: 295px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span>ADVICE #<span id="code">117</span></span>
+      <p id="advice">
+        “<span
+          >It is easy to sit up and take notice, what's difficult is getting up and taking
+          action.</span
+        >”
+      </p>
+      <div id="divider"></div>
+      <div id="btnWrap">
+        <button type="button" id="getAdvice">
+          <img src="./images/icon-dice.svg" alt="" />
+          <span class="screen-reader">Generate an advice</span>
+        </button>
+      </div>
+    </main>
+
+    <script>
+      const span = document.querySelector('#advice span');
+      const code = document.querySelector('#code');
+
+      async function advice() {
+        const response = await fetch('https://api.adviceslip.com/advice');
+        const {
+          slip: { id, advice },
+        } = await response.json();
+        code.textContent = id;
+        span.textContent = advice;
+      }
+
+      document.getElementById('getAdvice').addEventListener('click', () => advice());
+    </script>
+  </body>
+</html>
