@@ -1,0 +1,70 @@
+@use 'base';
+
+form {
+  position: relative;
+}
+
+.fields {
+  display: flex;
+  column-gap: 2rem;
+  > div {
+    flex-basis: 20%;
+  }
+}
+
+button {
+  display: block;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border-width: 0;
+  padding: 1.1rem;
+  margin-left: auto;
+  background-color: base.$purple;
+  cursor: pointer;
+}
+
+#btnWrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 36px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid base.$light-grey;
+}
+
+button img {
+  display: block;
+}
+button:hover {
+  background-color: base.$off-black;
+}
+
+@media screen and (max-width: 800px) {
+  .fields {
+    column-gap: 0.5rem;
+    > div {
+      flex-basis: auto;
+    }
+  }
+
+  #btnWrapper {
+    margin: 2rem 0;
+  }
+
+  #btnWrapper::before {
+    bottom: 26px;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  button img {
+    width: 26px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,58 @@
+@use 'base';
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: base.$smokey-grey;
+  display: block;
+}
+
+input {
+  box-sizing: border-box;
+  font-family: base.$font-stack;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.2rem;
+  width: 100%;
+  border: 1px solid base.$light-grey;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0 0.4rem 1rem;
+  margin: 0.3rem 0;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid base.$purple;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  -moz-appearance: none;
+  display: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.error {
+  color: base.$light-red;
+}
+
+.error:is(span) {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.error:is(input) {
+  border-color: base.$light-red;
+  color: initial;
+}
+
+@media screen and (max-width: 800px) {
+  input {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+}
