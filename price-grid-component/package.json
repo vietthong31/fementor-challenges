@@ -1,0 +1,21 @@
+{
+  "name": "single-price-grid-component-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "sass scss/style.scss css/style.css",
+    "clean": "cleancss -o css/style.min.css css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vietthong31/price-grid-component.git"
+  },
+  "author": "Thong Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vietthong31/price-grid-component/issues"
+  },
+  "homepage": "https://github.com/vietthong31/price-grid-component#readme"
+}

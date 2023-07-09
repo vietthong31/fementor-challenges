@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  background: #e5eff5;
+}
+
+h2 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.introduce {
+  background: white;
+}
+.introduce h1 {
+  color: #2ab2af;
+}
+.introduce p {
+  color: #98a6bd;
+}
+.introduce p.guarantee {
+  color: #c0df34;
+}
+
+.subscribe {
+  background: #2ab2af;
+}
+.subscribe .price {
+  color: white;
+}
+.subscribe p {
+  color: #e5eff5;
+}
+.subscribe .price + span {
+  color: rgba(229, 239, 245, 0.5);
+}
+
+.services {
+  background: #4abebd;
+}
+.services ul {
+  color: rgba(229, 239, 245, 0.8);
+  list-style-type: none;
+  padding: 0;
+}
+
+.sign-up {
+  background: #c0df34;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla";
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 720px;
+  min-height: 50vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px rgba(150, 150, 150, 0.5);
+}
+main section {
+  padding: 40px;
+  padding-top: 40px;
+}
+
+.introduce {
+  grid-column: 1/-1;
+}
+.introduce .guarantee {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.introduce .guarantee + p {
+  line-height: 1.5;
+}
+
+.subscribe .price {
+  font-size: 2em;
+}
+.subscribe .price + span {
+  vertical-align: super;
+  padding-left: 10px;
+}
+.subscribe a:link {
+  display: block;
+  width: 100%;
+  margin-top: 43px;
+  padding: 15px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s, background 0.2s;
+}
+.subscribe a:hover {
+  color: #c0df34;
+  border-color: #c0df34;
+  background: #2ab2af;
+}
+.subscribe a:active {
+  transform: scale(0.9);
+}
+.subscribe a:focus {
+  outline: none;
+}
+
+.services ul {
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    min-width: 0;
+  }
+
+  br {
+    display: none;
+  }
+
+  body {
+    padding: 50px 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
