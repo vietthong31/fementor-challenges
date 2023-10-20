@@ -21,8 +21,9 @@ function Form({ fields, onSubmit }) {
     if (!inputs.day) nextErrors.day = 'This field is required';
 
     const today = new Date();
+    const inputDate = new Date(inputs.year, inputs.month - 1, inputs.day);
 
-    if (inputs.year > today.getFullYear()) nextErrors.year = 'Must be in the past';
+    if (inputDate > today) nextErrors.year = 'Must be in the past';
     if (inputs.month < 1 || inputs.month > 12) nextErrors.month = 'Must be valid month';
     if (inputs.day < 1 || inputs.day > 31) nextErrors.day = 'Must be valid day';
 
