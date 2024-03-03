@@ -13,6 +13,6 @@
 
 - [03. Advice generator app](https://jovial-cascaron-ef9141.netlify.app/)
 - [04. Age calculator app](https://magical-frangipane-f739d9.netlify.app/)
-- [08. Intro section with dropdown navigation](https://fementor-challenge-snap.vercel.app/)
+- [08. Intro section with dropdown navigation](https://comfy-tartufo-18c09c.netlify.app/)
 - [09. Tip Calculator App](https://64618f4b8bb221722a851c10--guileless-centaur-7d07ff.netlify.app/)
 - [10. Notifications page](https://incredible-malasada-5375cf.netlify.app/)
