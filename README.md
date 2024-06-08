@@ -16,3 +16,8 @@
 - [08. Intro section with dropdown navigation](https://comfy-tartufo-18c09c.netlify.app/)
 - [09. Tip Calculator App](https://64618f4b8bb221722a851c10--guileless-centaur-7d07ff.netlify.app/)
 - [10. Notifications page](https://incredible-malasada-5375cf.netlify.app/)
+
+## Intermediate
+
+- [11. Todo app](https://animated-valkyrie-3781ee.netlify.app/)
+- [12. E-commerce product page](https://sweet-sopapillas-4959fd.netlify.app/)
