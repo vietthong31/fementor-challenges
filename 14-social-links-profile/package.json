@@ -1,0 +1,16 @@
+{
+  "name": "14-social-links-profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/input.css -o ./assets/main.css --minify",
+    "watch": "tailwindcss -i ./assets/input.css -o ./assets/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
