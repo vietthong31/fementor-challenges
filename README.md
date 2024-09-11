@@ -8,6 +8,7 @@
 - [05. Single price grid component](https://comfy-cascaron-fe5ec3.netlify.app/)
 - [06. Three column preview card](https://enchanting-selkie-7ef2fb.netlify.app/)
 - [07. Interactive rating component](https://polite-nasturtium-6c30bd.netlify.app/)
+- [14. Social links profile](https://verdant-marzipan-32f865.netlify.app/)
 
 ## Junior
 
