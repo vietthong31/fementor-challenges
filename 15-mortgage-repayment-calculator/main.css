@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: PlusJakartaSans;
+    src: url('/fonts/PlusJakartaSans-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  :root {
+    --color-red: theme(colors.red.DEFAULT);
+    font-family: PlusJakartaSans, sans-serif;
+  }
+
+  input[type='number'] {
+    appearance: textfield;
+  }
+}
