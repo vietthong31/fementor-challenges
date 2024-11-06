@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url('./assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url('./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'Red Hat Text', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root {
+  background-color: aliceblue;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.cart,
+.order {
+  scrollbar-width: thin;
+}
